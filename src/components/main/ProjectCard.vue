@@ -1,6 +1,5 @@
 <script setup>
-import { defineProps, ref, onMounted, computed } from 'vue'
-import foo from 'bar'
+import { ref, onMounted, computed } from 'vue'
 
 defineProps({
     project: {
