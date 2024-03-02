@@ -1,6 +1,4 @@
 <script setup>
-import { defineProps, ref, onMounted, computed } from 'vue'
-import foo from 'bar'
 
 defineProps({
     project: {
@@ -49,13 +47,7 @@ onMounted(() => {
         <button @click="increment">
             increment
         </button>
-        <div class="card-image">
-            <figure class="image is-4by3">
-                <img
-                    alt="Placeholder image"
-                    :src="project.image">
-            </figure>
-        </div>
+        <MainProjectImage :image="project.image" />
         <div class="card-content">
             <div class="media">
                 <div class="media-content">
