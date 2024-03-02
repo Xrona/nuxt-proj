@@ -10,6 +10,8 @@ const project = ref({
 
 <template>
     <div>
+        <TheIntro />
+
         <h1>Hello world index page</h1>
         <MainProjectCard :project />
         <button
