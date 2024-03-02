@@ -6,6 +6,8 @@
   "semi": false,
   "bracketSpacing": true,
   "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "jsxBracketSameLine": true,
   "arrowParens": "avoid",
   "singleAttributePerLine": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"],

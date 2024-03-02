@@ -1,6 +1,6 @@
 <script setup>
-defineProps({
-    project: {
+  defineProps({
+project: {
         type: Object,
         required: true,
     },
@@ -9,10 +9,10 @@ defineProps({
 
 <template>
     <div class="card">
-        <div class="card-image">
+ <div class="card-image">
             <img
-                :src="project.image"
-                alt="Placeholder image" />
+                alt="Placeholder image"
+                :src="project.image" />
         </div>
         <div class="card-content">
             <div class="media">
@@ -30,9 +30,7 @@ defineProps({
                 <br />
                 <a
                     id="ten1"
-                    class="flex">
-                    learn more
-                </a>
+                    class="flex">learn more</a>
                 <a
                     :href="project.link"
                     target="_blank"
