@@ -1,8 +1,14 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
     content: ['presets/**/*.{js,vue,ts}'],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Calibre', ...defaultTheme.fontFamily.sans],
+            },
             colors: {
                 'primary-50': 'rgb(var(--primary-50))',
                 'primary-100': 'rgb(var(--primary-100))',
