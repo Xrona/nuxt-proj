@@ -9,7 +9,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    extends: ['@nuxt' /* 'plugin:prettier/recommended' */],
+    extends: ['@nuxt', 'plugin:prettier/recommended'],
     plugins: ['nuxt'],
     rules: {
         'comma-dangle': ['error', 'always-multiline'],
@@ -74,6 +74,18 @@ module.exports = {
             },
         ],
         'vue/singleline-html-element-content-newline': 'off',
+        'vue/html-self-closing': [
+            'error',
+            {
+                html: {
+                    void: 'never',
+                    normal: 'always',
+                    component: 'always',
+                },
+                svg: 'always',
+                math: 'always',
+            },
+        ],
     },
     overrides: [
         {

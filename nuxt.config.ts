@@ -10,4 +10,7 @@ export default defineNuxtConfig({
         unstyled: true,
         importPT: { from: path.resolve(__dirname, './presets/lara/') },
     },
+    imports: {
+        dirs: ['composables/**', 'utils/**'],
+    },
 })

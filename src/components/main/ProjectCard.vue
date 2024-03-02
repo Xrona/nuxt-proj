@@ -9,11 +9,9 @@ defineProps({
 
 <template>
     <div class="card">
-        <div class="card-image">
-            <img
-                alt="Placeholder image"
-                :src="project.image" />
-        </div>
+        <button @click="increment">increment</button>
+
+        <div class="card-image" />
         <div class="card-content">
             <div class="media">
                 <div class="media-content">
@@ -27,7 +25,6 @@ defineProps({
             </div>
             <div class="content">
                 {{ project.description }}
-                <br />
                 <a
                     id="ten1"
                     class="flex">
