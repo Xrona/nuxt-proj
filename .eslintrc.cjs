@@ -1,17 +1,16 @@
-/* eslint-env node */
 module.exports = {
-    extends: [
-        'eslint:recommended',
-        'plugin:vue/vue3-recommended',
-        '@nuxt/eslint-config',
-        'plugin:prettier/recommended',
-        'prettier',
-    ],
+    root: true,
+    env: {
+        browser: true,
+        node: true,
+    },
+    parser: 'vue-eslint-parser',
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    root: true,
+    extends: ['@nuxt' /* 'plugin:prettier/recommended' */],
+    plugins: ['nuxt'],
     rules: {
         'comma-dangle': ['error', 'always-multiline'],
         indent: ['error', 4],
@@ -38,6 +37,10 @@ module.exports = {
             {
                 singleline: 'never',
                 multiline: 'never',
+                selfClosingTag: {
+                    singleline: 'never',
+                    multiline: 'never',
+                },
             },
         ],
         'vue/html-indent': 'off',
@@ -70,6 +73,7 @@ module.exports = {
                 alphabetical: true,
             },
         ],
+        'vue/singleline-html-element-content-newline': 'off',
     },
     overrides: [
         {
