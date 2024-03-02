@@ -11,8 +11,8 @@ defineProps({
     <div class="card">
         <div class="card-image">
             <img
-                :src="project.image"
-                alt="Placeholder image" />
+                alt="Placeholder image"
+                :src="project.image" />
         </div>
         <div class="card-content">
             <div class="media">

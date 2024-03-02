@@ -19,9 +19,11 @@ const project = ref({
             hello
         </button>
 
+        <Button label="Clike me" />
+
         <div
-            class="flex"
-            id="ten">
+            id="ten"
+            class="flex">
             <ul>
                 <li><span>lorem</span></li>
                 <li><span>lorem</span></li>
