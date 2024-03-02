@@ -13,15 +13,23 @@ const project = ref({
     <div>
         <h1>Hello world index page</h1>
         <MainProjectCard :project />
-        <a
-            class="dsadas"
-            href="ddwwdw">
-            span
-        </a>
+        <button
+            id="btn"
+            class="mx-auto bg-red-500 text-light text-blue-400 height-[400px]"
+            @click="console.log">
+            hello
+        </button>
+
+        <Button label="Clike me" />
+
         <div
-            id="dsd"
-            class="sdasd">
-            helo
+            id="ten"
+            class="flex">
+            <ul>
+                <li><span>lorem</span></li>
+                <li><span>lorem</span></li>
+                <li><span>lorem</span></li>
+            </ul>
         </div>
     </div>
 </template>
