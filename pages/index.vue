@@ -11,7 +11,7 @@ const project = ref({
 <template>
   <div>
     <h1>Hello world index page</h1>
-    <MainProjectCard project />
+    <MainProjectCard :project />
   </div>
 </template>
 
