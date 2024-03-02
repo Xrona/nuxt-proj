@@ -1,17 +1,61 @@
 <script setup>
+import { defineProps, ref, onMounted, computed } from 'vue'
+import foo from 'bar'
+
 defineProps({
     project: {
         type: Object,
         required: true,
     },
 })
+
+const test =ref(false)
+const ubivaca = ref(0)
+const te = ref('hello')
+
+const computedVal = computed(() => {
+    return ubivaca.value * 2
+})
+const computedLeg = computed(() => {
+    return ubivaca.value * 3
+})
+
+const increment = () => {
+    ubivaca.value++
+}
+
+const testFunc =() => {
+    test.value = !test.value
+    console.log(test.value)
+
+    if (test.value) {
+        console.log('true')
+    }
+
+    return test.value
+}
+
+
+onMounted(() => {
+    console.log('mounted')
+    ubivaca.value = 10
+    testFunc()
+    increment()
+})
 </script>
 
 <template>
     <div class="card">
-        <button @click="increment">increment</button>
-
-        <div class="card-image" />
+        <button @click="increment">
+            increment
+        </button>
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img
+                    alt="Placeholder image"
+                    :src="project.image">
+            </figure>
+        </div>
         <div class="card-content">
             <div class="media">
                 <div class="media-content">
