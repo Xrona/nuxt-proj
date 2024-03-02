@@ -9,7 +9,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    extends: ['@nuxt', 'plugin:prettier/recommended'],
+    extends: ['@nuxt'],
     plugins: ['nuxt'],
     rules: {
         'comma-dangle': ['error', 'always-multiline'],
@@ -43,7 +43,13 @@ module.exports = {
                 },
             },
         ],
-        'vue/html-indent': 'off',
+        'vue/html-indent': [
+            'error',
+            4,
+            {
+                baseIndent: 1,
+            },
+        ],
         'vue/no-v-html': 'off',
         'vue/script-indent': [
             'error',
@@ -73,7 +79,14 @@ module.exports = {
                 alphabetical: true,
             },
         ],
-        'vue/singleline-html-element-content-newline': 'off',
+        'vue/singleline-html-element-content-newline': [
+            'error',
+            {
+                'ignoreWhenNoAttributes': true,
+                'ignoreWhenEmpty': true,
+                'externalIgnores': [],
+            },
+        ],
         'vue/html-self-closing': [
             'error',
             {
@@ -86,6 +99,18 @@ module.exports = {
                 math: 'always',
             },
         ],
+        'padding-line-between-statements': [
+            'error',
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'always', prev: 'import', next: '*' },
+            { blankLine: 'any', prev: 'import', next: 'import' },
+            { blankLine: 'always', prev: 'export', next: '*' },
+            { blankLine: 'any', prev: 'export', next: 'export' },
+            { blankLine: 'always', prev: 'block-like', next: '*' },
+            { blankLine: 'always', prev: '*', next: 'block-like' },
+        ],
+        'vue/padding-line-between-blocks': ['error', 'always'],
+
     },
     overrides: [
         {
