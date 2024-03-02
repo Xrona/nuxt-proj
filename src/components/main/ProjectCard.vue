@@ -35,9 +35,9 @@ defineProps({
                 </a>
                 <a
                     :href="project.link"
-                    target="_blank"
-                    >Learn more</a
-                >
+                    target="_blank">
+                    Learn more
+                </a>
             </div>
         </div>
     </div>
