@@ -9,7 +9,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    extends: ['@nuxt'],
+    extends: ['@nuxt', "plugin:tailwindcss/recommended"],
     plugins: ['nuxt'],
     rules: {
         'comma-dangle': ['error', 'always-multiline'],
@@ -79,6 +79,7 @@ module.exports = {
                 alphabetical: true,
             },
         ],
+        'vue/multi-word-component-names': 'off',
         'vue/singleline-html-element-content-newline': [
             'error',
             {

@@ -8,7 +8,9 @@
 FROM node:20.11 AS base
 RUN corepack enable
 
-WORKDIR /app
+WORKDIR /node/app
+
+#RUN chmod -R 777 /node/
 #COPY --link .npmrc package.json ./
 #COPY . .
 #RUN pnpm install

@@ -3,21 +3,19 @@ version: '3.8'
 services:
   node:
     build:
-      dockerfile: Dockerfile
-      context: .
-    user: node
-    working_dir: /app
-    # environment:
-    #   HOST: 0.0.0.0
-    #   PORT: 3000
+      context: docker/dev
+#    user: node
+    working_dir: /node/app
+    environment:
+       HOST: 0.0.0.0
+       PORT: 3000
     ports:
       - "3000:3000"
     volumes:
-      - .:/app
-      - ./node_modules:/app/node_modules
+      - .:/node/app
     networks:
       - web
-    command: sh -c 'pnpm i && pnpm dev'
+    command: sh -c 'pnpm i --store-dir /node/pnpm-store && pnpm dev'
 
 networks:
   web:
