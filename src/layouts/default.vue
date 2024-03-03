@@ -13,5 +13,6 @@
 <style>
 :root {
   --surface-950: 23 23 26;
+  --surface-600: 138 138 138;
 }
 </style>

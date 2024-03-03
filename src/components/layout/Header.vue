@@ -5,17 +5,22 @@ const links = [
     { name: 'About', url: '/about' },
     { name: 'Contact', url: '/contact' },
 ]
+
+const route = useRoute()
+
 </script>
 
 <template>
-    <header class="mx-auto flex max-w-[1720px] items-center justify-between">
+    <header class="mx-auto flex max-w-[1720px] items-center justify-between py-9">
         <h1>Borne.</h1>
         <nav>
-            <ul>
+            <ul class="flex items-center gap-12">
                 <template
                     v-for="link in links"
                     :key="link.url">
-                    <li class="not:last:mr-10 inline-block">
+                    <li
+                        class="hove:text-white text-surface-600"
+                        :class="{'text-white': route.href === link.url }">
                         <NuxtLink :to="link.url">
                             {{ link.name }}
                         </NuxtLink>
