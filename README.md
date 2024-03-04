@@ -1,75 +1,44 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Pushka major league
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Eto doka po [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Koroche raspakowka
+                                  
+### For windows maybe nushen budet chocolatey chtobi zapusk comands make
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Bud uveren chto install docker then:
 
 ```bash
-# npm
-npm run dev
+# zapusk sborki image docker i podnyatie container
+# only one raz v nachale
+make up
 
-# pnpm
-pnpm run dev
+# chtobi see chto u tebya in container proishodit
+make logs
 
-# yarn
-yarn dev
+# zapuskaesh container i robish
+make start
 
-# bun
-bun run dev
+# ostanovka container, day computer machine otdohnut
+make stop
+
+# dropaetsa container, kogda nado perestroit
+make down
+
+# dropaetsa container i ubivaetsa image
+make down-v
+
+# zapusk pnpm inside container
+make pn-command command="i any-lib"
+
+# eto start i logs vmeste
+make
+
 ```
-
-## Production
-
-Build the application for production:
+                     
+## Deploy
 
 ```bash
-# npm
-npm run build
+poka netu
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

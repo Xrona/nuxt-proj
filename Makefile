@@ -1,4 +1,4 @@
-all: up logs
+all: start logs
 
 up:
 	@docker-compose up -d --build --force-recreate  --remove-orphans

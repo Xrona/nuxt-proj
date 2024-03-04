@@ -20,7 +20,7 @@ const route = useRoute()
                     :key="link.url">
                     <li
                         class="hove:text-white text-surface-600"
-                        :class="{'text-white': route.href === link.url }">
+                        :class="{ 'text-white': route.href === link.url }">
                         <NuxtLink :to="link.url">
                             {{ link.name }}
                         </NuxtLink>
@@ -30,7 +30,7 @@ const route = useRoute()
         </nav>
         <div class="flex items-start gap-[55px]">
             <div class="flex flex-col">
-                <a href="mailto:borne@meteor.com">borne@meteor.com </a>
+                <a href="mailto:borne@meteor.com">borne@meteor.com</a>
                 <a href="tel:79423233232">+7 (942) 323 32-32</a>
             </div>
             <button class="relative flex size-[45px] items-center justify-center gap-1 rounded-full border border-white">
