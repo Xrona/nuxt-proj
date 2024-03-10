@@ -13,7 +13,7 @@ module.exports = {
     plugins: ['nuxt'],
     rules: {
         'comma-dangle': ['error', 'always-multiline'],
-        indent: ['error', 4],
+        indent: ['error', 2],
         'key-spacing': [
             'error',
             {
@@ -36,16 +36,16 @@ module.exports = {
             'error',
             {
                 singleline: 'never',
-                multiline: 'never',
+                multiline: 'always',
                 selfClosingTag: {
                     singleline: 'never',
-                    multiline: 'never',
+                    multiline: 'always',
                 },
             },
         ],
         'vue/html-indent': [
             'error',
-            4,
+            2,
             {
                 baseIndent: 1,
             },
@@ -53,7 +53,7 @@ module.exports = {
         'vue/no-v-html': 'off',
         'vue/script-indent': [
             'error',
-            4,
+            2,
             {
                 baseIndent: 0,
                 switchCase: 1,
@@ -111,7 +111,7 @@ module.exports = {
             { blankLine: 'always', prev: '*', next: 'block-like' },
         ],
         'vue/padding-line-between-blocks': ['error', 'always'],
-
+        'tailwindcss/no-custom-classname': 'off',
     },
     overrides: [
         {

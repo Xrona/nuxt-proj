@@ -10,6 +10,8 @@ RUN corepack enable
 
 WORKDIR /node/app
 
+RUN pnpm config set store-dir /node/.pnpm-store
+
 #RUN chmod -R 777 /node/
 #COPY --link .npmrc package.json ./
 #COPY . .
